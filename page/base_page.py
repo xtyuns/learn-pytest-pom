@@ -13,18 +13,18 @@ class BasePage:
     def __init__(self, selenium: WebDriver):
         self.selenium = selenium
 
-    def pick_element(self, locator: Locator) -> WebElement:
+    def _pick_element(self, locator: Locator) -> WebElement:
         return self.selenium.find_element(locator.by, locator.value)
 
-    def do_input(self, locator: Locator, value):
-        ele = self.pick_element(locator)
+    def _do_input(self, locator: Locator, value):
+        ele = self._pick_element(locator)
         ele.clear()
         ele.send_keys(value)
 
-    def do_click(self, locator: Locator):
-        ele = self.pick_element(locator)
+    def _do_click(self, locator: Locator):
+        ele = self._pick_element(locator)
         ele.click()
 
-    def pick_text(self, locator: Locator) -> str:
-        ele = self.pick_element(locator)
+    def _pick_text(self, locator: Locator) -> str:
+        ele = self._pick_element(locator)
         return ele.text

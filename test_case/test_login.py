@@ -1,7 +1,7 @@
 import pytest
 from selenium.common import NoSuchElementException
 
-from pages.login_page import LoginPage
+from page.login_page import LoginPage
 
 
 @pytest.fixture(scope="class")
