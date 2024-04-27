@@ -1,6 +1,6 @@
 [tool.poetry]
 package-mode = false
-name = "data-report-testing"
+name = "study-pytest-testing"
 version = "0.1.0"
 description = ""
 authors = ["xtyuns <xtyuns@163.com>"]
